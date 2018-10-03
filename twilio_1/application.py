@@ -1,4 +1,5 @@
-"Contains a Flask application, which shows some of Twilio's functionality."
+"""Contains a Flask application, which shows some of Twilio's functionality."""
+
 from twilio.rest import Client
 from flask import Flask
 
