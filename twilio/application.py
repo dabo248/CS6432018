@@ -17,7 +17,7 @@ footer_text = '</body>\n</html>'
 application = Flask(__name__)
 
 application.add_url_rule('/', 'index', (lambda: header_text +
-    "twilio_1" + footer_text))
+    "twilio" + footer_text))
 
 # Twilio (Part 1)
 account_sid = config.ACCOUNT_SID
