@@ -31,4 +31,4 @@ Send a SMS by calling http://127.0.0.1:5000/sms.
 
 ## Webhook
 
-A webhook returning static response messages is provided at http://127.0.0.1:5000/sms.
+A webhook returning static response messages is provided at http://127.0.0.1:5000/doctor.
