@@ -1,4 +1,4 @@
-# twilio_1
+# twilio
 
 Send a SMS with Flask and Twilio.
 
@@ -13,7 +13,7 @@ $ brew install pipenv
 Install Python dependencies:
 
 ```
-$ cd twilio_1
+$ cd twilio
 $ pipenv install
 ```
 
@@ -27,4 +27,8 @@ Start the server with:
 pipenv run python application.py
 ```
 
-Send a SMS by calling http://127.0.0.1:5000/.
+Send a SMS by calling http://127.0.0.1:5000/sms.
+
+## Webhook
+
+A webhook returning static response messages is provided at http://127.0.0.1:5000/sms.
