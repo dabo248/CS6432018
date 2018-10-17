@@ -2,9 +2,9 @@
 
 from random import randint
 
-from twilio.rest import Client
 from flask import Flask, request, redirect
 from twilio.twiml.messaging_response import MessagingResponse
+from twilio.rest import Client
 
 import config
 from resources.response import MALARIA_0, MALARIA_1, COLD
