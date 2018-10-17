@@ -14,6 +14,12 @@ header_text = '''
     <html>\n<head> <title>Twilio SMS</title> </head>\n<body>'''
 footer_text = '</body>\n</html>'
 
+application = Flask(__name__)
+
+application.add_url_rule('/', 'index', (lambda: header_text +
+    "twilio_1" + footer_text))
+
+# Twilio (Part 1)
 account_sid = config.ACCOUNT_SID
 auth_token  = config.AUTH_TOKEN
 client = Client(account_sid, auth_token)
@@ -22,18 +28,12 @@ to = config.TO
 from_ = config.FROM_
 body = config.BODY
 
-# Twilio (Part 1)
 def send_message(recipient, sender, message):
     """Send a SMS to a specific recipient."""
     return client.messages.create(
         to=recipient, 
         from_=sender,
         body=message)
-
-application = Flask(__name__)
-
-application.add_url_rule('/', 'index', (lambda: header_text +
-    "twilio_1" + footer_text))
 
 application.add_url_rule('/sms', 'sms', (lambda: header_text +
     "Sent SMS with sid " + send_message(to, from_, body).sid + " to number " + 
